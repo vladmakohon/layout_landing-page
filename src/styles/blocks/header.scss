@@ -1,0 +1,38 @@
+.header {
+  background-image: url(../images/header-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__content {
+    min-height: 100vh;
+  }
+
+  &__top {
+    margin-bottom: 104px;
+
+    @include onTablet {
+      margin-bottom: 90px;
+    }
+
+    @include onDesktop {
+      margin-bottom: 34px;
+    }
+  }
+
+  &__title {
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: -1.5px;
+    text-align: center;
+    color: $color-header-white;
+
+    @include onTablet {
+      font-size: 64px;
+    }
+
+    @include onDesktop {
+      font-size: 80px;
+    }
+  }
+}

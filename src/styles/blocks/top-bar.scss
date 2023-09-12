@@ -1,0 +1,52 @@
+.top-bar {
+  padding-block: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include onTablet {
+    padding-block: 50px;
+  }
+
+  &__logo {
+    display: block;
+    font-size: 32px;
+    line-height: 0.8;
+    font-weight: 700;
+    letter-spacing: -1.2px;
+    text-align: center;
+    color: $color-header-white;
+
+    @include changeOnHover(transform, scale(1.2));
+
+    @include onTablet {
+      font-size: 40px;
+      letter-spacing: -1.5px;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    @include onTablet {
+      gap: 56px;
+    }
+  }
+
+  &__phone-wrapper {
+    position: relative;
+  }
+
+  &__phone-info {
+    position: absolute;
+    right: 100%;
+    top: -125%;
+    transition: opacity $transition-duration;
+  }
+
+  &__phone-wrapper:hover &__phone-info {
+    opacity: 1;
+  }
+}
